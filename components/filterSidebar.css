@@ -1,0 +1,58 @@
+.filter-sidebar {
+  width: 100%;
+  max-width: 200px;
+  padding-right: 1rem;
+  border-right: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.filter-category {
+  margin-bottom: 1.5rem;
+}
+
+.filter-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.filter-category-icon {
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+.filter-category-collapsed {
+  font-size: 13px;
+  color: #777;
+  margin-left: 0.25rem;
+}
+
+.filter-options {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-option label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+}
