@@ -8,8 +8,29 @@
 .heading {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #333;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* filter and all items bar */
+.barLeftWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.totalItems {
+  font-weight: 700;
+}
+.showFilterBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: gray;
 }
 
 .grid {
@@ -55,6 +76,38 @@
   margin: 0.5rem 0;
 }
 
-.productsSection{
+.productsSection {
   display: flex;
+}
+
+.description {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.filterStripeBar {
+  padding: 1rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3vw;
+    color: #333;
+    letter-spacing: 5px;
+    font-weight: 500;
+  }
+  .description {
+    margin-bottom: 40px;
+  }
 }

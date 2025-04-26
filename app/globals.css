@@ -12,15 +12,6 @@
   font-display: swap;
 }
 
-/* Optional: define more weights if needed */
-/* @font-face {
-  font-family: 'Simplon Norm';
-  src: url('/fonts/SimplonNorm-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-} */
-
 body {
   font-family: "Simplon Norm", sans-serif;
   margin: 0;

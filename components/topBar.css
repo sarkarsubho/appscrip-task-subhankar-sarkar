@@ -1,0 +1,45 @@
+.topbar {
+    width: 100%;
+    background-color: #000;
+    color: #f472b6; /* pinkish */
+    padding: 10px 0;
+  }
+  
+  .topbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bar-items {
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .bar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  /* Hide mobile version on desktop */
+  .mobile {
+    display: none;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
+  }
+  

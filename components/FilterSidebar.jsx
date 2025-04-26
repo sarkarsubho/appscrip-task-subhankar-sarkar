@@ -180,11 +180,17 @@ export function FilterSidebar() {
           >
             <span>{category.title}</span>
             <span className="filter-category-icon">
-              {expandedCategories[category.id] ? (
+              {/* {expandedCategories[category.id] ? (
                 <ChevronUp />
               ) : (
                 <ChevronDown />
-              )}
+              )} */}
+              <ChevronDown
+                style={{
+                  rotate: expandedCategories[category.id] ? "180deg" : "0deg",
+                }}
+                className="arrow"
+              />
             </span>
           </button>
 
