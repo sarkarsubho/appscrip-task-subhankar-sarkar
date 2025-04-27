@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import "./styles/footer.css";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 export default function Footer() {
   const [openSection, setOpenSection] = useState(null);
@@ -51,7 +52,7 @@ export default function Footer() {
                   alt="us flag"
                   width={20}
                   height={20}
-                  priority
+                  loading="lazy"
                 />
 
                 <span className="section-text">• USD</span>
@@ -80,20 +81,12 @@ export default function Footer() {
               onClick={() => toggleSection("brand")}
             >
               <h3 className="brand-title">mettā muse</h3>
-              <svg
-                className="chevron"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 9l6 6 6-6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ChevronDown
+                style={{
+                  rotate: openSection === "brand" ? "180deg" : "0deg",
+                }}
+                className="arrow"
+              />
             </div>
             <div
               className={`section-content ${
@@ -128,20 +121,12 @@ export default function Footer() {
               onClick={() => toggleSection("quickLinks")}
             >
               <h3 className="section-title">QUICK LINKS</h3>
-              <svg
-                className="chevron"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 9l6 6 6-6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ChevronDown
+                style={{
+                  rotate: openSection === "quickLinks" ? "180deg" : "0deg",
+                }}
+                className="arrow"
+              />
             </div>
             <div
               className={`section-content ${
@@ -180,20 +165,12 @@ export default function Footer() {
                 onClick={() => toggleSection("followUs")}
               >
                 <h3 className="section-title">FOLLOW US</h3>
-                <svg
-                  className="chevron"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 9l6 6 6-6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <ChevronDown
+                  style={{
+                    rotate: openSection === "followUs" ? "180deg" : "0deg",
+                  }}
+                  className="arrow"
+                />
               </div>
               <div
                 className={`section-content ${
@@ -208,7 +185,6 @@ export default function Footer() {
                       alt="instagram"
                       width={45}
                       height={45}
-                      priority
                       loading="lazy"
                     />
                   </Link>
@@ -219,7 +195,6 @@ export default function Footer() {
                       alt="linkedIn"
                       width={45}
                       height={45}
-                      priority
                       loading="lazy"
                     />
                   </Link>
@@ -238,7 +213,6 @@ export default function Footer() {
                     alt="Google Pay (GPay)"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>
@@ -248,7 +222,6 @@ export default function Footer() {
                     alt="Mastercard"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>
@@ -258,7 +231,6 @@ export default function Footer() {
                     alt="PayPal"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>
@@ -268,7 +240,6 @@ export default function Footer() {
                     alt="American Express (Amex)"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>
@@ -278,7 +249,6 @@ export default function Footer() {
                     alt="Apple Pay"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>
@@ -288,7 +258,6 @@ export default function Footer() {
                     alt="Shop Pay"
                     width={50}
                     height={50}
-                    priority
                     loading="lazy"
                   />
                 </div>

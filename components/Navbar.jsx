@@ -65,7 +65,6 @@ export default function Navbar() {
             width={30}
             height={30}
             priority
-            loading="lazy"
           />
         </div>
 
