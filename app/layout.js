@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <body>
         <TopBar></TopBar>
         <Navbar></Navbar>
+        <Breadcrumbs />
         <main>{children}</main>
         <Footer />
       </body>

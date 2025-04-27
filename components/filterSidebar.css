@@ -1,6 +1,5 @@
 .filter-sidebar {
   width: 100%;
-  max-width: 200px;
   padding-right: 1rem;
   border-right: 1px solid #e0e0e0;
   box-sizing: border-box;
@@ -55,4 +54,11 @@
   font-size: 13px;
   font-weight: 400;
   color: #333;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .filter-sidebar {
+    max-width: 200px;
+  }
 }

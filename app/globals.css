@@ -17,3 +17,51 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Breadcrumbs  */
+
+.breadcrumbs {
+  padding: 1rem 0;
+  font-size: 14px;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #555;
+  position: relative;
+}
+
+.breadcrumb-link::after {
+  content: "|";
+  margin-left: 8px;
+  color: #aaa;
+}
+
+.breadcrumb-list li:last-child .breadcrumb-link::after {
+  content: "";
+}
+
+.breadcrumb-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.breadcrumbsNestedPage{
+  color: #000;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

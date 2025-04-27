@@ -5,6 +5,7 @@ import styles from "../app/page.module.css";
 import { FilterSidebar } from "@/components/FilterSidebar";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useSearchParams } from "next/navigation";
+import ProductCard from "./ProductCard";
 
 export default function ProductsPage({ products }) {
   const searchParams = useSearchParams();
@@ -101,8 +102,7 @@ export default function ProductsPage({ products }) {
           </div>
           <div
             className={styles.showFilterBtn}
-            onClick={() => setShowFilterBar(!showFilterBar)} // Toggle sidebar visibility
-            style={{ cursor: "pointer" }}
+            onClick={() => setShowFilterBar(!showFilterBar)}
           >
             <ChevronRight
               size={16}
@@ -111,7 +111,18 @@ export default function ProductsPage({ products }) {
             />
             {showFilterBar ? "HIDE FILTER" : "SHOW FILTER"}
           </div>
+          {/* for mobile screen */}
+          <div
+            className={styles.showFilterBtnM}
+            onClick={() => setShowFilterBar(!showFilterBar)}
+          >
+            FILTER
+          </div>
         </div>
+
+        {/* mobileDevider */}
+        <div className={styles.devider}></div>
+
         <div className="select-wrapper">
           <select
             aria-label="none"
@@ -120,11 +131,11 @@ export default function ProductsPage({ products }) {
             onClick={() => setDropDownopen(!dropDownopen)}
             onBlur={(e) => setDropDownopen(false)}
           >
-            <option value="Recommended">Recommended</option>
-            <option value="NewestFirst">Newest First</option>
-            <option value="Popular">Popular</option>
-            <option value="PriceHighToLow">Price: High to Low</option>
-            <option value="PriceLowToHigh">Price: Low to High</option>
+            <option value="Recommended">RECOMENDED</option>
+            <option value="NewestFirst">NEWEST FIRST</option>
+            <option value="Popular">POPULAR</option>
+            <option value="PriceHighToLow">PRICE: HIGH TO LOW</option>
+            <option value="PriceLowToHigh">PRICE: LOW TO HIGH</option>
           </select>
           <ChevronDown
             size={16}
@@ -139,18 +150,19 @@ export default function ProductsPage({ products }) {
         {/* Conditionally render sidebar */}
         <div className={styles.grid}>
           {filteredProducts.map((product) => (
-            <div key={product.id} className={styles.card}>
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={200}
-                height={200}
-                className={styles.image}
-                priority={false}
-              />
-              <h2>{product.title}</h2>
-              <p>${product.price}</p>
-            </div>
+            // <div key={product.id} className={styles.card}>
+            //   <Image
+            //     src={product.image}
+            //     alt={product.title}
+            //     width={200}
+            //     height={200}
+            //     className={styles.image}
+            //     priority={false}
+            //   />
+            //   <h2>{product.title}</h2>
+            //   <p>${product.price}</p>
+            // </div>
+            <ProductCard key={product.id} product={product}/>
           ))}
         </div>
       </div>
