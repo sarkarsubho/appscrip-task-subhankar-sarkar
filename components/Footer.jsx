@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import "./footer.css";
+import "./styles/footer.css";
 import Image from "next/image";
 
 export default function Footer() {
@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="currency-option">
                 <Image
                   src="/images/USflag.svg"
-                  alt="MySite Logo"
+                  alt="us flag"
                   width={20}
                   height={20}
                   priority
@@ -205,20 +205,22 @@ export default function Footer() {
                     <span className="sr-only">Instagram</span>
                     <Image
                       src="/images/insta.svg"
-                      alt="MySite Logo"
+                      alt="instagram"
                       width={45}
                       height={45}
                       priority
+                      loading="lazy"
                     />
                   </Link>
                   <Link href="#" className="social-icon">
                     <span className="sr-only">LinkedIn</span>
                     <Image
                       src="/images/linkedin.svg"
-                      alt="MySite Logo"
+                      alt="linkedIn"
                       width={45}
                       height={45}
                       priority
+                      loading="lazy"
                     />
                   </Link>
                 </div>
@@ -233,55 +235,61 @@ export default function Footer() {
                 <div className="payment-icon">
                   <Image
                     src="/images/gPay.svg"
-                    alt="MySite Logo"
+                    alt="Google Pay (GPay)"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="payment-icon">
                   <Image
                     src="/images/masterCard.svg"
-                    alt="MySite Logo"
+                    alt="Mastercard"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="payment-icon">
                   <Image
                     src="/images/paypal.svg"
-                    alt="MySite Logo"
+                    alt="PayPal"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="payment-icon">
                   <Image
                     src="/images/amex.svg"
-                    alt="MySite Logo"
+                    alt="American Express (Amex)"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="payment-icon">
                   <Image
                     src="/images/ipay.svg"
-                    alt="MySite Logo"
+                    alt="Apple Pay"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="payment-icon">
                   <Image
                     src="/images/pay.svg"
-                    alt="MySite Logo"
+                    alt="Shop Pay"
                     width={50}
                     height={50}
                     priority
+                    loading="lazy"
                   />
                 </div>
               </div>

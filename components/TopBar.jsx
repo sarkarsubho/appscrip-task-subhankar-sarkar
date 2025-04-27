@@ -1,7 +1,7 @@
 "use client";
 
+import "./styles/topBar.css";
 import Image from "next/image";
-import "./topBar.css";
 
 export default function TopBar() {
   return (
@@ -23,7 +23,13 @@ export default function TopBar() {
 function BarItem() {
   return (
     <div className="bar-item">
-      <Image src={"/globe.svg"} alt="Star Icon" width={16} height={16} />
+      <Image
+        src={"/globe.svg"}
+        alt="globe"
+        width={16}
+        height={16}
+        loading="lazy"
+      />
       <span>Lorem ipsum dolor</span>
     </div>
   );

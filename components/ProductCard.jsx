@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Heart } from "lucide-react";
-import "./productCard.css";
+import "./styles/productCard.css";
 import Image from "next/image";
 
 export default function ProductCard({ product }) {
@@ -21,6 +21,7 @@ export default function ProductCard({ product }) {
           height={200}
           className="product-image"
           priority={false}
+          loading="lazy"
         />
       </div>
       <div className="product-details">

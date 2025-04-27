@@ -1,11 +1,11 @@
 "use client";
 
+import "./styles/filterSidebar.css";
+import { Label } from "@/components/ui/Label";
+import { Checkbox } from "@/components/ui/Checkbox";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Checkbox } from "@/components/ui/Checkbox";
-import { Label } from "@/components/ui/Label";
-import "./filterSidebar.css";
 
 const filterCategories = [
   {
@@ -160,8 +160,6 @@ export function FilterSidebar() {
   // Sync with URL params on mount and when URL changes
   useEffect(() => {
     const newFilters = getSelectedFilters();
-    // Only update state if the filters have actually changed
-    // This prevents the infinite loop
     const currentFiltersStr = JSON.stringify(selectedFilters);
     const newFiltersStr = JSON.stringify(newFilters);
 
@@ -180,11 +178,6 @@ export function FilterSidebar() {
           >
             <span>{category.title}</span>
             <span className="filter-category-icon">
-              {/* {expandedCategories[category.id] ? (
-                <ChevronUp />
-              ) : (
-                <ChevronDown />
-              )} */}
               <ChevronDown
                 style={{
                   rotate: expandedCategories[category.id] ? "180deg" : "0deg",

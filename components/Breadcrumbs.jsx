@@ -5,12 +5,11 @@ import { usePathname } from "next/navigation";
 
 export function Breadcrumbs() {
   const pathname = usePathname();
-
   const pathSegments = pathname.split("/").filter((segment) => segment);
 
-  // Build breadcrumb paths
+  // Bbreadcrumb paths
   const breadcrumbs = pathSegments.map((segment, index) => {
-    const href = "/" + pathSegments.slice(0, index + 1).join("|");
+    const href = "/" + pathSegments.slice(0, index + 1).join("/");
     const label = decodeURIComponent(segment).replace(/-/g, " ");
     return { href, label };
   });

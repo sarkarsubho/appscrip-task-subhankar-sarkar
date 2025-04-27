@@ -1,7 +1,8 @@
 "use client";
 
+import "./styles/sidebar.css";
 import { useEffect } from "react";
-import "./sidebar.css";
+import { X } from "lucide-react";
 
 export default function Sidebar({ isOpen, onClose, side = "left", children }) {
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Sidebar({ isOpen, onClose, side = "left", children }) {
       ></div>
       <div className={`sidebar ${side} ${isOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={onClose}>
-          ×
+          <X className="close-icon" />
         </button>
         {children}
       </div>

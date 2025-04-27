@@ -1,6 +1,5 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import styles from "../app/page.module.css";
 import { FilterSidebar } from "@/components/FilterSidebar";
 import { ChevronDown, ChevronRight } from "lucide-react";
@@ -9,8 +8,8 @@ import ProductCard from "./ProductCard";
 
 export default function ProductsPage({ products }) {
   const searchParams = useSearchParams();
-  const [showFilterBar, setShowFilterBar] = useState(false); // State to toggle sidebar
-  let [dropDownopen, setDropDownopen] = useState(false);
+  const [showFilterBar, setShowFilterBar] = useState(false); 
+  const [dropDownopen, setDropDownopen] = useState(false);
   const [sortOption, setSortOption] = useState("Recommended");
   const [filteredProducts, setFilteredProducts] = useState(products || []);
 
@@ -71,12 +70,11 @@ export default function ProductsPage({ products }) {
           sortedData.reverse();
           break;
         case "Popular":
-          // No changes
           break;
         default:
           break;
       }
-      // Only update state if the filtered data has changed
+
       setFilteredProducts((prev) => {
         if (JSON.stringify(prev) !== JSON.stringify(sortedData)) {
           return sortedData;
@@ -146,22 +144,9 @@ export default function ProductsPage({ products }) {
       </div>
 
       <div className={styles.productsSection}>
-        {showFilterBar && <FilterSidebar />}{" "}
-        {/* Conditionally render sidebar */}
+        {showFilterBar && <FilterSidebar />}
         <div className={styles.grid}>
           {filteredProducts.map((product) => (
-            // <div key={product.id} className={styles.card}>
-            //   <Image
-            //     src={product.image}
-            //     alt={product.title}
-            //     width={200}
-            //     height={200}
-            //     className={styles.image}
-            //     priority={false}
-            //   />
-            //   <h2>{product.title}</h2>
-            //   <p>${product.price}</p>
-            // </div>
             <ProductCard key={product.id} product={product}/>
           ))}
         </div>
