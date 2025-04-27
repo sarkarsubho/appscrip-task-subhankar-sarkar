@@ -85,7 +85,7 @@ export default function Footer() {
                 style={{
                   rotate: openSection === "brand" ? "180deg" : "0deg",
                 }}
-                className="arrow"
+                className="arrow chevron"
               />
             </div>
             <div
@@ -125,7 +125,7 @@ export default function Footer() {
                 style={{
                   rotate: openSection === "quickLinks" ? "180deg" : "0deg",
                 }}
-                className="arrow"
+                className="arrow chevron"
               />
             </div>
             <div
@@ -169,7 +169,7 @@ export default function Footer() {
                   style={{
                     rotate: openSection === "followUs" ? "180deg" : "0deg",
                   }}
-                  className="arrow"
+                  className="arrow chevron"
                 />
               </div>
               <div
