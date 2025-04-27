@@ -60,7 +60,7 @@ export default function Navbar() {
             ☰
           </button>
           <Image
-            src="/images/logo.svg"
+            src="/images/Logo.svg"
             alt="MySite Logo"
             width={30}
             height={30}

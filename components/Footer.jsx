@@ -204,7 +204,7 @@ export default function Footer() {
                   <Link href="#" className="social-icon">
                     <span className="sr-only">Instagram</span>
                     <Image
-                      src="/images/insta.svg"
+                      src="/images/Insta.svg"
                       alt="instagram"
                       width={45}
                       height={45}
